@@ -46,7 +46,7 @@ employeeList.map((employee) => {
     let totalwage = 0;
     let count = 0;
 
-    for (let i = 1; i <= 20; i++) {
+    while (count !== 20) {
         let partTimeWork = createRandomNumber();
         isPresent = createRandomNumber();
 
@@ -69,8 +69,10 @@ employeeList.map((employee) => {
                 "TotalWage": totalwage
             }
         }
-
     }
+
+
+
 
     employee.details.map((detail) => {
         monthlyWage += detail.TotalWage;
