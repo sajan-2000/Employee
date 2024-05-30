@@ -36,13 +36,17 @@ function createRandomNumber() {
 
 let isPresent;
 employeeList.map((employee) => {
+    let dailyWage = 0;
+
     isPresent = createRandomNumber();
 
     if (isPresent === 0) {
         employee.attendance = "Absent"
     } else {
         employee.attendance = "Present"
+        dailyWage = 20 * 8;
     }
+    console.log(dailyWage);
 
 })
 
