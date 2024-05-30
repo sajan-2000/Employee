@@ -29,3 +29,21 @@ let employeeList = [{
 }
 ]
 
+function createRandomNumber() {
+    return Math.floor(Math.random() * 2)
+}
+
+
+let isPresent;
+employeeList.map((employee) => {
+    isPresent = createRandomNumber();
+
+    if (isPresent === 0) {
+        employee.attendance = "Absent"
+    } else {
+        employee.attendance = "Present"
+    }
+
+})
+
+console.log(employeeList);
