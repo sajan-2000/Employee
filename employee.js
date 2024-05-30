@@ -37,7 +37,9 @@ function createRandomNumber() {
 let isPresent;
 employeeList.map((employee) => {
     let dailyWage = 0;
+    let partTimeWage = 0;
 
+    let partTimeWork = createRandomNumber();
     isPresent = createRandomNumber();
 
     if (isPresent === 0) {
@@ -45,8 +47,12 @@ employeeList.map((employee) => {
     } else {
         employee.attendance = "Present"
         dailyWage = 20 * 8;
+        if (partTimeWork === 1) {
+            partTimeWage = 20 * 8;
+        } else {
+            partTimeWage = 0;
+        }
     }
-    console.log(dailyWage);
 
 })
 
